@@ -395,7 +395,7 @@ bool Decoder::_read_coeff(int *run, int *lvl, bool first = false) {
 }
 
 inline
-int sign(int n) { return n > 1 ? 1 : -1; }
+int sign(int n) { return (n>0) ? 1 : (n<0) ? -1 : 0; }
 
 void Decoder::block(int i) {
     debug("          BLOCK %d:\n", i);
